@@ -91,5 +91,8 @@ mvn clean install -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf
 
 echo "Copying surefire-reports to ${OUTPUT_DIR}/scenarios"
 
+echo "List of surefire-reports found:"
+find ./* -name "surefire-reports"
+
 mkdir -p ${OUTPUT_DIR}/scenarios
 find ./* -name "surefire-reports" -exec cp --parents -r {} ${OUTPUT_DIR}/scenarios \;
